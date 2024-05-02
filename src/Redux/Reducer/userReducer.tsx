@@ -1,10 +1,10 @@
 import { IDogsAction, dogsActionsTypes, IDogsState } from '../Types/reduxTypes'
 
 const initialState: IDogsState = {
-	dogs: [],
-	searchedDog: [],
+	dogs:{message:"",status:""} ,
+	searchedDog:{message:"",status:""},
 	loading: false,
-	error: null,
+	error: "",
 }
 
 // reducer
@@ -16,25 +16,25 @@ export const userReducer = (
 		case dogsActionsTypes.GET_DOGS_LOADING:
 			return {
 				...state,
-				dogs: [],
+				dogs: {message:"",status:""},
 				loading: true,
-				error: null,
+				error: "",
 			}
 		case dogsActionsTypes.GET_DOGS_SUCCESS:
 			return {
 				...state,
 				dogs: action.payload,
 				loading: false,
-				error: null,
+				error:"",
 			}
 
 		case dogsActionsTypes.GET_DOGS_ERROR:
 			return {
 				...state,
-				dogs: [],
 				
+				dogs:{message:"",status:""} ,
 				loading: false,
-				error: action.payload,
+				error: action.payload!,
 			}
 			case dogsActionsTypes.SEARCH_DOGS:
 

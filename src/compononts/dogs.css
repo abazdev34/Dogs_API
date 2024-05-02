@@ -1,0 +1,30 @@
+.dogs{
+	display: flex;
+}
+.dog_img{
+	width: 500px;
+	height: 500px;
+	border-radius: 10px;
+	margin: 10px auto;
+}
+.btn{
+margin: 10px;
+	background: red;
+	color: white;
+	width: 300px;
+	padding: 10px;
+	border-radius: 10px;
+}
+.search{
+	margin: 0 auto;
+	display: flex;
+	flex-direction: column;
+	gap: 20px;
+}
+input{
+
+	margin: 0 auto;
+	width: 300px;
+	padding: 10px;
+	border-radius: 10px;
+}

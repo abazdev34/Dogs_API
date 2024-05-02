@@ -33,7 +33,7 @@ export const searchDogs =
 
 			dispatch({
 				type: dogsActionsTypes.SEARCH_DOGS,
-				payload: url.data.message,
+				payload: url.data
 			})
 		} catch (error) {
 			console.log(error)

@@ -1,15 +1,15 @@
 
 
-export interface IdogsType {
+export interface IDogsType {
 	message: string
 	status: string
 
 }
 export interface IDogsState {
-	dogs: IdogsType[]
-	searchedDog: IdogsType[]
+	dogs: IDogsType
+	searchedDog: IDogsType
 	loading: boolean
-	error: string | null
+	error: string 
 }
 
 // ! people actions
@@ -21,11 +21,11 @@ export enum dogsActionsTypes {
 }
 export interface ISearchDogs {
 	type: dogsActionsTypes.SEARCH_DOGS
-	payload: IdogsType
+	payload: IDogsType
 }
 export interface IDogsSuccess {
 	type: dogsActionsTypes.GET_DOGS_SUCCESS
-	payload: IdogsType
+	payload: IDogsType
 }
 export interface IDogsError {
 	type: dogsActionsTypes.GET_DOGS_ERROR
